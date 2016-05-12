@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TiX-Jp-n7l">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--MainViewController-->
+        <scene sceneID="BxF-4F-cYr">
+            <objects>
+                <viewController title="MainViewController" id="TiX-Jp-n7l" customClass="MainViewController" customModule="FitBit_Sync_1_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PW2-jo-kQj"/>
+                        <viewControllerLayoutGuide type="bottom" id="fvl-su-CJG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cHa-Dn-LBH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="healthkit-logo" translatesAutoresizingMaskIntoConstraints="NO" id="FgN-SB-j00">
+                                <rect key="frame" x="154" y="157" width="203" height="139"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPe-By-wwP">
+                                <rect key="frame" x="190" y="368" width="131" height="30"/>
+                                <color key="backgroundColor" red="0.1647058824" green="0.3921568627" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Open in Safari">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="openWithSafariVC:" destination="TiX-Jp-n7l" eventType="touchUpInside" id="kme-30-TYM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FgN-SB-j00" firstAttribute="centerX" secondItem="cHa-Dn-LBH" secondAttribute="centerX" constant="1" id="7re-hU-B2d"/>
+                            <constraint firstItem="gPe-By-wwP" firstAttribute="centerX" secondItem="cHa-Dn-LBH" secondAttribute="centerX" constant="1" id="8Z0-6O-PIC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="l8q-x1-zvd" kind="show" identifier="options" id="DK1-Yu-Z1x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OPF-9Y-w0x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="429" y="-202"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="W5K-cR-b8Y">
+            <objects>
+                <tabBarController id="l8q-x1-zvd" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="zYa-sy-xUf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="64b-X1-xwE" kind="relationship" relationship="viewControllers" id="XRm-JJ-v8Z"/>
+                        <segue destination="tX0-ds-nFF" kind="relationship" relationship="viewControllers" id="MUY-Kp-3go"/>
+                        <segue destination="n2O-vf-vnr" kind="relationship" relationship="viewControllers" id="IBO-uS-n5q"/>
+                        <segue destination="ZpB-o9-PDg" kind="relationship" relationship="viewControllers" id="BrV-kO-ehD"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eZr-C8-O8p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="633" y="520"/>
+        </scene>
+        <!--Sync-->
+        <scene sceneID="2Zj-RG-PHj">
+            <objects>
+                <viewController restorationIdentifier="SyncViewController" storyboardIdentifier="SyncViewController" id="64b-X1-xwE" customClass="SyncViewController" customModule="FitBit_Sync_1_0" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jfQ-wL-dxw"/>
+                        <viewControllerLayoutGuide type="bottom" id="tek-eg-nLt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u89-zh-UrT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3IM-F8-vEV">
+                                <rect key="frame" x="276" y="83" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Currently you have selected to sync:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCK-QR-AdQ">
+                                <rect key="frame" x="54" y="28" width="278" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Sleep" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPn-Bo-usv">
+                                <rect key="frame" x="148" y="88" width="43" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Steps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyE-go-f34">
+                                <rect key="frame" x="148" y="131" width="44" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cKk-pM-FAZ">
+                                <rect key="frame" x="276" y="126" width="51" height="31"/>
+                            </switch>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZsQ-zi-NEK">
+                                <rect key="frame" x="159" y="291" width="69" height="30"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="USm-28-fPn">
+                                        <rect key="frame" x="0.0" y="0.0" width="69" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvi-q9-3qB">
+                                                <rect key="frame" x="0.0" y="0.0" width="69" height="30"/>
+                                                <color key="backgroundColor" red="0.1647058824" green="0.3921568627" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Sync Now">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="PerformSync:" destination="64b-X1-xwE" eventType="touchUpInside" id="uEh-AD-UD2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmI-B5-W2f">
+                                <rect key="frame" x="115" y="456" width="217" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jmI-B5-W2f" firstAttribute="centerX" secondItem="u89-zh-UrT" secondAttribute="centerX" id="5ws-CA-Bw7"/>
+                            <constraint firstItem="WyE-go-f34" firstAttribute="centerX" secondItem="u89-zh-UrT" secondAttribute="centerX" id="Bq6-ob-8u4"/>
+                            <constraint firstItem="oPn-Bo-usv" firstAttribute="centerX" secondItem="u89-zh-UrT" secondAttribute="centerX" constant="1" id="CgM-rE-mxW"/>
+                            <constraint firstItem="oPn-Bo-usv" firstAttribute="centerX" secondItem="u89-zh-UrT" secondAttribute="centerX" id="E2J-IT-2S2"/>
+                            <constraint firstItem="lCK-QR-AdQ" firstAttribute="centerX" secondItem="u89-zh-UrT" secondAttribute="centerX" id="U7H-wC-A49"/>
+                            <constraint firstItem="WyE-go-f34" firstAttribute="top" secondItem="oPn-Bo-usv" secondAttribute="bottom" constant="30" id="Xlb-f5-F9S"/>
+                            <constraint firstItem="oPn-Bo-usv" firstAttribute="top" secondItem="lCK-QR-AdQ" secondAttribute="bottom" constant="30" id="rBZ-1C-2Rk"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="U7H-wC-A49"/>
+                                <exclude reference="CgM-rE-mxW"/>
+                                <exclude reference="E2J-IT-2S2"/>
+                                <exclude reference="rBZ-1C-2Rk"/>
+                                <exclude reference="Bq6-ob-8u4"/>
+                                <exclude reference="Xlb-f5-F9S"/>
+                                <exclude reference="5ws-CA-Bw7"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Sync" id="FJ6-ec-i7k"/>
+                    <connections>
+                        <outlet property="FitbitSyncStatus" destination="jmI-B5-W2f" id="TO8-uL-tZF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fj1-pr-cbA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1971" y="-254"/>
+        </scene>
+        <!--Support-->
+        <scene sceneID="GZE-4m-i6K">
+            <objects>
+                <viewController storyboardIdentifier="SupportViewController" id="n2O-vf-vnr" customClass="SupportViewController" customModule="FitBit_Sync_1_0" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pux-nE-Xdx"/>
+                        <viewControllerLayoutGuide type="bottom" id="O6N-0Y-LUt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gQh-vn-MSj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Support" id="R2j-V6-dqX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EuB-t7-ZVZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1966" y="1169"/>
+        </scene>
+        <!--Logout-->
+        <scene sceneID="Ni7-Pk-E3Z">
+            <objects>
+                <viewController id="ZpB-o9-PDg" customClass="LogoutViewController" customModule="FitBit_Sync_1_0" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ub7-nt-h06"/>
+                        <viewControllerLayoutGuide type="bottom" id="glS-pW-thu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pvj-sz-mrG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Logout" id="fgl-ZE-yrO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Emx-6x-xc6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1971" y="1867"/>
+        </scene>
+        <!--Social-->
+        <scene sceneID="hal-gj-b4h">
+            <objects>
+                <viewController restorationIdentifier="SocialViewController" storyboardIdentifier="SocialViewController" id="tX0-ds-nFF" customClass="SocialViewController" customModule="FitBit_Sync_1_0" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hAw-3u-gKN"/>
+                        <viewControllerLayoutGuide type="bottom" id="acG-MT-KRH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Q3y-xY-o6G">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Social" id="41I-EZ-pzG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yHg-fL-Nbx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1971" y="463"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="healthkit-logo" width="247" height="223"/>
+    </resources>
+</document>
