@@ -34,7 +34,6 @@ class SyncViewController: UIViewController {
         let urlRequest: NSMutableURLRequest = NSMutableURLRequest(URL: url)
         urlRequest.addValue("Bearer " + (id as String), forHTTPHeaderField: "Authorization");
         
-        
         let config = NSURLSessionConfiguration.defaultSessionConfiguration()
         let session = NSURLSession(configuration: config);
         let task = session.dataTaskWithRequest(urlRequest, completionHandler: { (data, response, error) in
